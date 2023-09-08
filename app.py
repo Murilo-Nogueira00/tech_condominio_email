@@ -27,9 +27,10 @@ def envia_email_reserva(form: EmailReservaSchema):
     espaco=form.espaco
     data=form.data
     email=form.email
+    assunto = "Reserva Confirmada"
 
     try:
-        email_tech.enviar_email(email_tech.monta_corpo_email_reserva(morador, espaco, data), email)
+        email_tech.enviar_email(email_tech.monta_corpo_email_reserva(morador, espaco, data), assunto, email)
         return {"message": "Email enviado com sucesso"}, 200
 
 
@@ -47,9 +48,10 @@ def envia_email_ocorrencia(form: EmailOcorrenciaSchema):
     motivo=form.motivo
     data=form.data
     email=form.email
+    assunto = "Nova Ocorrência Registrada"
 
     try:
-        email_tech.enviar_email(email_tech.monta_corpo_email_ocorrencia(morador, tipo, motivo, data), email)
+        email_tech.enviar_email(email_tech.monta_corpo_email_ocorrencia(morador, tipo, motivo, data), assunto, email)
         return {"message": "Email enviado com sucesso"}, 200
 
 

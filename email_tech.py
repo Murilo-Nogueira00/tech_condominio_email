@@ -35,10 +35,10 @@ def monta_corpo_email_ocorrencia(apartamento, tipo, motivo, data):
     """  
     return corpo_email
 
-def enviar_email(corpo_email, email_destinatario):
+def enviar_email(corpo_email, assunto, email_destinatario):
 
     msg = email.message.Message()
-    msg['Subject'] = "Reserva Confirmada"
+    msg['Subject'] = assunto
     msg['From'] = main_mail
     msg['To'] = email_destinatario
     msg.add_header('Content-Type', 'text/html')
