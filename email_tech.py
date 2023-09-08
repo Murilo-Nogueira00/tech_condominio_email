@@ -18,7 +18,7 @@ def monta_corpo_email_reserva(apartamento, espaco, data):
     Sua reserva para {pronome} {espaco} foi confirmada para o dia {data}.</p>
     <p></p>
     <p>Att,</p>
-    <p>Tech Condomínio</p>
+    <p>Tech Condomínio.</p>
     """
     return corpo_email
 
@@ -26,13 +26,12 @@ def monta_corpo_email_ocorrencia(apartamento, tipo, motivo, data):
 
     corpo_email = f"""
     <p>Este é um email automático, favor não responda.</p>
-    <p>Este é um email automático, favor não responda.</p>
     <p>Olá, morador do apartamento {apartamento}!
-    Uma ${tipo} foi registrada por uma ocorrência no dia {data}, motivo:</p>
+    Uma {tipo} foi registrada por uma ocorrência no dia {data}, motivo:</p>
     <p>{motivo}</p>
     <p></p>
     <p>Att,</p>
-    <p>Tech Condomínio</p>
+    <p>Tech Condomínio.</p>
     """  
     return corpo_email
 
@@ -50,4 +49,3 @@ def enviar_email(corpo_email, email_destinatario):
     # Login Credentials for send the mail
     s.login(msg['From'], password)
     s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
-    # print('Email enviado para %s' % msg['To'])
