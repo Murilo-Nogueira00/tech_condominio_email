@@ -22,11 +22,13 @@ def monta_corpo_email_reserva(apartamento, espaco, data):
     """
     return corpo_email
 
-def monta_corpo_email_ocorrencia(nome, tipo, motivo, data):
+def monta_corpo_email_ocorrencia(apartamento, tipo, motivo, data):
 
     corpo_email = f"""
     <p>Este é um email automático, favor não responda.</p>
-    <p>Olá, {nome}! Uma ${tipo} foi registrada por uma ocorrência no dia {data}, motivo:</p>
+    <p>Este é um email automático, favor não responda.</p>
+    <p>Olá, morador do apartamento {apartamento}!
+    Uma ${tipo} foi registrada por uma ocorrência no dia {data}, motivo:</p>
     <p>{motivo}</p>
     <p></p>
     <p>Att,</p>
