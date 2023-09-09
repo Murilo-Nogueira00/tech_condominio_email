@@ -11,6 +11,7 @@ from sqlalchemy.exc import IntegrityError
 from flask_cors import CORS
 from error import ErrorSchema
 
+
 info = Info(title="Email Tech Condomínio", version="1.0.0")
 app = OpenAPI(__name__, info=info)
 CORS(app)
@@ -65,3 +66,5 @@ def check_status():
     """Verifica se a API está funcionando."""
     return {"message": "Está funcionando!"}, 200
 
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8000)
