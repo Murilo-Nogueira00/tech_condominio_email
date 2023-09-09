@@ -4,6 +4,16 @@ Este projeto é a entrega do MVP da disciplina Arquitetura de Software do curso 
 
 ---
 
+## Requisitos para utilizar a aplicação ##
+
+Por segurança, é necessário adicionar a senha de aplicativos do gmail nas variáveis de ambiente com o seguinte valor:
+
+```
+TECH_CONDOMINIO_MAIL_PASSWORD
+```
+
+Dessa forma a senha não fica visível no código.
+
 ## Dockerização da aplicação
 
 Faça o download e instale o Docker Desktop na versão mais recente e compatível com seu PC.

@@ -1,13 +1,9 @@
 import re
 from flask_openapi3 import OpenAPI, Info, Tag
-from flask import redirect
-from urllib.parse import unquote
-from datetime import datetime
 
 from email_schema import *
 import email_tech
 
-from sqlalchemy.exc import IntegrityError
 from flask_cors import CORS
 from error import ErrorSchema
 
