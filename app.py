@@ -1,11 +1,10 @@
-import re
-from flask_openapi3 import OpenAPI, Info, Tag
-
-from email_schema import *
 import email_tech
 
-from flask_cors import CORS
 from error import ErrorSchema
+from email_schema import *
+
+from flask_cors import CORS
+from flask_openapi3 import OpenAPI, Info, Tag
 
 
 info = Info(title="Email Tech Condomínio", version="1.0.0")

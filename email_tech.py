@@ -2,8 +2,9 @@ import smtplib
 import email.message
 import os
 
-main_mail = "techcondominiopucrio@gmail.com"
+mail_var_env = 'TECH_CONDOMINIO_MAIL'
 senha_var_env = 'TECH_CONDOMINIO_MAIL_PASSWORD'
+main_mail = os.environ.get(mail_var_env)
 password = os.environ.get(senha_var_env)
 
 def monta_corpo_email_reserva(apartamento, espaco, data):
